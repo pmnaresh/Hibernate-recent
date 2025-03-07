@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC  
+    "-//Hibernate/Hibernate Configuration DTD 3.0//EN"  
+    "https://hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+    <session-factory>
+
+        <!-- Database Connection Properties -->
+        <property name="hibernate.connection.driver_class">oracle.jdbc.OracleDriver</property>
+        <property name="hibernate.connection.url">jdbc:oracle:thin:@DESKTOP-2GU83B7:1521:XE</property>
+        <property name="hibernate.connection.username">SYSTEM</property>
+        <property name="hibernate.connection.password">system</property>
+
+        <!-- Hibernate Dialect for Oracle -->
+        <property name="hibernate.dialect">org.hibernate.dialect.OracleDialect</property>
+
+        <!-- Hibernate Settings -->
+        <property name="hibernate.show_sql">true</property>
+        <property name="hibernate.format_sql">true</property>
+        <property name="hibernate.hbm2ddl.auto">update</property>
+
+        <!-- Mapping Files -->
+        <mapping resource="hbm.mapping.xml"/>
+
+    </session-factory>
+</hibernate-configuration>

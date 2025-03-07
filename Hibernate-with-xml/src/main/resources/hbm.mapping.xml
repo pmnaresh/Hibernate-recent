@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC  
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"  
+    "https://hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="com.practice.model.Product" table="PRODUCT">
+        <id name="productId" column="PRODCUCT_ID">
+            <generator class="increment"/>
+        </id>
+        <property name="productName" column="PRODUCT_NAME" type="string"/>
+        <property name="productPrice" column="PRODUCT_PRICE" type="float"/>
+        <property name="productQuantity" column="PRODUCT_QUANTITY" type="integer"/>
+    </class>
+</hibernate-mapping>
